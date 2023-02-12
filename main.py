@@ -9,7 +9,7 @@ global sizeOfPhoto
 
 openai.api_key = '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'
 openai.Model.list()
-bot = telebot.TeleBot(boten.TOKEN)
+bot = telebot.TeleBot('6131575699:AAHbRHRqmOvgCNVo09fxxOwGGTavCBXkHgM')
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
