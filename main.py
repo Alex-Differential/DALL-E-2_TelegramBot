@@ -1,6 +1,6 @@
 import openai
 import telebot
-import bot
+import boten
 
 from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -9,7 +9,7 @@ global sizeOfPhoto
 
 openai.api_key = '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'
 openai.Model.list()
-bot = telebot.TeleBot(bot.TOKEN)
+bot = telebot.TeleBot(boten.TOKEN)
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
