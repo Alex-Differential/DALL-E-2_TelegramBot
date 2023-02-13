@@ -3,7 +3,7 @@ import telebot
 import boten
 
 #from telebot import types
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+#from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 global sizeOfPhoto 
 
@@ -34,12 +34,12 @@ def exit(message):
     bot.stop_polling()
 
 def markup_inline():
-    markup = InlineKeyboardMarkup()
+    markup = telebot.types.InlineKeyboardMarkup()
     markup.row_width = 3
     markup.add(
-        InlineKeyboardButton("256x256", callback_data = "256x256"),
-        InlineKeyboardButton("512x512", callback_data = "512x512"),
-        InlineKeyboardButton("1024x1024", callback_data = "1024x1024")
+        telebot.types.InlineKeyboardButton("256x256", callback_data = "256x256"),
+        telebot.types.InlineKeyboardButton("512x512", callback_data = "512x512"),
+        telebot.types.InlineKeyboardButton("1024x1024", callback_data = "1024x1024")
     )
     return markup
 
