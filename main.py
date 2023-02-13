@@ -2,7 +2,7 @@ import openai
 import telebot
 import boten
 
-from telebot import types
+#from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 global sizeOfPhoto 
@@ -16,8 +16,8 @@ def welcome(message):
     sti = open('stickerGoodMorning.webp','rb')
     bot.send_sticker(message.chat.id, sti)
 
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    item1 = types.KeyboardButton("Створення нового зображення")
+    markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
+    item1 = telebot.types.KeyboardButton("Створення нового зображення")
     markup.add(item1)
 
     bot.send_message(message.chat.id, "Vіtаєmо, {0.first_name}!\n Ja - <b>{1.first_name}</b>, bot, jakyj bulo stvoreno dḷa testuvaṇṇa Calendar API.".format(message.from_user, bot.get_me()),
