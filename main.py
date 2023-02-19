@@ -7,7 +7,7 @@ import PyTelegramBotAPI
 #from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 global sizeOfPhoto 
-
+ 
 openai.api_key = 'sk-avaKydHs7FYL3f############'
 openai.Model.list()
 bot = telebot.TeleBot('6131575699:A########################M')
